@@ -1,4 +1,69 @@
 @import "~bootstrap/scss/bootstrap.scss";
+body {
+  font: 14px "Century Gothic", Futura, sans-serif;
+  margin: 20px; background-color: rgb(53, 27, 27);
+}
+.row {
+    margin-left: 40%;
+}
+.title {
+    color: white;
+    align-content: center;
+}
+.title1 {margin-left: 15%; color: white; margin-top: 10%;}
+.forma {background-color: black; margin-top: 20px;
+border-radius: 10%;}
+.alinea {margin-left: 40%;
+margin-top: 15px;
+border-style: unset;
+background-color: white;
+border-radius: 5%;}
+.form-control {margin-top: 20px;}
+// ol, ul {
+//   padding-left: 30px;
+// }
+
+// .board-row:after {
+//   clear: both;
+//   content: "";
+//   display: table;
+// }
+
+// .status {
+//   margin-bottom: 10px;
+// }
+
+// .square {
+//   background: #fff;
+//   border: 1px solid #999;
+//   float: left;
+//   font-size: 24px;
+//   font-weight: bold;
+//   line-height: 34px;
+//   height: 34px;
+//   margin-right: -1px;
+//   margin-top: -1px;
+//   padding: 0;
+//   text-align: center;
+//   width: 34px;
+// }
+
+// .square:focus {
+//   outline: none;
+// }
+
+// .kbd-navigation .square:focus {
+//   background: #ddd;
+// }
+
+// .game {
+//   display: flex;
+//   flex-direction: row;
+// }
+
+// .game-info {
+//   margin-left: 20px;
+// }
 
 /* 
 

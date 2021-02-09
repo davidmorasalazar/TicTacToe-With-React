@@ -1,13 +1,14 @@
+//first page
 //import react into the bundle
 import React from "react";
 import ReactDOM from "react-dom";
-// import React, { Component } from "react";
+import React, { Component } from 'react';
 //include bootstrap npm library into the bundle
 import "bootstrap";
 
 //include your index.scss file into the bundle
-import "../styles/index.scss";
-// import { Page } from "./component/firstpage.js";
+import "../../styles/index.scss";
+
 class Page extends React.Component {
 	render() {
 		return (
@@ -49,8 +50,5 @@ class Page extends React.Component {
 		);
 	}
 }
-function Game() {
-	return <Page />;
-} // ========================================
-//render your react application
-ReactDOM.render(<Game />, document.querySelector("#app"));
+// export class Page {} // Don’t forget to use export default!
+
