@@ -1,15 +1,13 @@
 //first page
 //import react into the bundle
 import React from "react";
-import ReactDOM from "react-dom";
-import React, { Component } from 'react';
 //include bootstrap npm library into the bundle
 import "bootstrap";
 
 //include your index.scss file into the bundle
-import "../../styles/index.scss";
+import "../styles/index.scss";
 
-class Page extends React.Component {
+export class Page extends React.Component {
 	render() {
 		return (
 			<div className="container">
@@ -50,5 +48,3 @@ class Page extends React.Component {
 		);
 	}
 }
-// export class Page {} // Don’t forget to use export default!
-

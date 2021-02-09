@@ -7,50 +7,21 @@ import "bootstrap";
 
 //include your index.scss file into the bundle
 import "../styles/index.scss";
-// import { Page } from "./component/firstpage.js";
-class Page extends React.Component {
-	render() {
-		return (
-			<div className="container">
-				<div className="row">
-					<h2 className="title">Tic Tac Toe in React.js</h2>
-				</div>
-				<div className="row">
-					<h4 className="title">Pick a weapon</h4>
-				</div>
-				<div className="row">
-					<form className="forma">
-						<div className="form-group">
-							<label className="title1">CHOOSE YOUR WEAPON</label>
-							<div className="col">
-								<label for="inputPassword2" className="sr-only">
-									Player 1
-								</label>
-								<input
-									type="text"
-									className="form-control"
-									id="inputPassword2"
-									placeholder="Player 1"></input>
-								<label for="inputPassword2" className="sr-only">
-									Player 2
-								</label>
-								<input
-									type="text"
-									className="form-control"
-									id="inputPassword2"
-									placeholder="Player 2"></input>
-							</div>
-							<button className="fas fa-times-circle alinea"></button>
-							<button className="far fa-circle alinea"></button>
-						</div>
-					</form>
-				</div>
-			</div>
-		);
+import { Page } from "./firstpage.js";
+import { Tictac } from "./tictac.js";
+class Tic extends React.Component {
+	constructor() {
+		super();
+		return <label>hola</label>;
 	}
 }
-function Game() {
-	return <Page />;
+export function Game() {
+	return (
+		<div>
+			<Page />;
+			<Tictac />;
+		</div>
+	);
 } // ========================================
 //render your react application
 ReactDOM.render(<Game />, document.querySelector("#app"));

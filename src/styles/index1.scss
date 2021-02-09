@@ -1,25 +1,4 @@
 @import "~bootstrap/scss/bootstrap.scss";
-body {
-  font: 14px "Century Gothic", Futura, sans-serif;
-  margin: 20px; background-color: rgb(53, 27, 27);
-}
-.row {
-    margin-left: 40%;
-}
-.title {
-    color: white;
-    align-content: center;
-}
-.title1 {margin-left: 15%; color: white; margin-top: 10%;}
-.forma {background-color: black; margin-top: 20px;
-border-radius: 10%;}
-.alinea {margin-left: 40%;
-margin-top: 15px;
-border-style: unset;
-background-color: white;
-border-radius: 5%;}
-.form-control {margin-top: 20px;}
-
 ol, ul {
   padding-left: 30px;
 }
@@ -32,11 +11,6 @@ ol, ul {
 
 .status {
   margin-bottom: 10px;
-  color: white;
-}
-.status1 {
-  margin-bottom: 10px;
-  color: green;
 }
 
 .square {
@@ -65,7 +39,6 @@ ol, ul {
 .game {
   display: flex;
   flex-direction: row;
-  margin-left: 40%;
 }
 
 .game-info {
