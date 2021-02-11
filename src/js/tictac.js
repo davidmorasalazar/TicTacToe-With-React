@@ -3,7 +3,7 @@
 import React from "react";
 //include bootstrap npm library into the bundle
 import "bootstrap";
-
+import PropTypes from "prop-types";
 //include your index.scss file into the bundle
 import "../styles/index.scss";
 
@@ -14,7 +14,6 @@ function Square(props) {
 		</button>
 	);
 }
-
 class Board extends React.Component {
 	renderSquare(i) {
 		return (
@@ -24,7 +23,6 @@ class Board extends React.Component {
 			/>
 		);
 	}
-
 	render() {
 		return (
 			<div>
@@ -152,3 +150,11 @@ function calculateWinner(squares) {
 }
 
 // ========================================
+Square.propTypes = {
+	onClick: PropTypes.string,
+	value: PropTypes.number
+};
+Board.propTypes = {
+	squares: PropTypes.number,
+	onClick: PropTypes.func
+};

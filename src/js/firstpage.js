@@ -22,7 +22,9 @@ export class Page extends React.Component {
 						<div className="form-group">
 							<label className="title1">CHOOSE YOUR WEAPON</label>
 							<div className="col">
-								<label for="inputPassword2" className="sr-only">
+								<label
+									htmlFor="inputPassword2"
+									className="sr-only">
 									Player 1
 								</label>
 								<input
@@ -30,7 +32,9 @@ export class Page extends React.Component {
 									className="form-control"
 									id="inputPassword2"
 									placeholder="Player 1"></input>
-								<label for="inputPassword2" className="sr-only">
+								<label
+									htmlFor="inputPassword2"
+									className="sr-only">
 									Player 2
 								</label>
 								<input
