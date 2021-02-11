@@ -3,11 +3,16 @@
 import React from "react";
 //include bootstrap npm library into the bundle
 import "bootstrap";
-
+import PropTypes from "prop-types";
 //include your index.scss file into the bundle
 import "../styles/index.scss";
 
 export class Page extends React.Component {
+	constructor(props) {
+		super(props);
+		this.player1 = null;
+		this.player2 = null;
+	}
 	render() {
 		return (
 			<div className="container">
@@ -30,8 +35,13 @@ export class Page extends React.Component {
 								<input
 									type="text"
 									className="form-control"
-									id="inputPassword2"
-									placeholder="Player 1"></input>
+									aria-label="Default"
+									aria-describedby="inputGroup-sizing-default"
+									placeholder="Player 1"
+									onChange={event =>
+										(this.player1 = event.target.value)
+									}
+								/>
 								<label
 									htmlFor="inputPassword2"
 									className="sr-only">
@@ -40,11 +50,40 @@ export class Page extends React.Component {
 								<input
 									type="text"
 									className="form-control"
-									id="inputPassword2"
-									placeholder="Player 2"></input>
+									aria-label="Default"
+									aria-describedby="inputGroup-sizing-default"
+									placeholder="Player 2"
+									onChange={event =>
+										(this.player1 = event.target.value)
+									}
+								/>
 							</div>
-							<button className="fas fa-times-circle alinea"></button>
-							<button className="far fa-circle alinea"></button>
+							<button
+								type="button"
+								className="btn btn-secondary"
+								data-dismiss="modal"
+								onClick={() =>
+									this.props.onSetTurn(
+										"X",
+										this.player1,
+										this.player2
+									)
+								}>
+								<span className="xMarker">X</span>
+							</button>
+							<button
+								type="button"
+								className="btn btn-primary"
+								data-dismiss="modal"
+								onClick={() =>
+									this.props.onSetTurn(
+										"O",
+										this.player1,
+										this.player2
+									)
+								}>
+								<span className="oMarker">O</span>
+							</button>
 						</div>
 					</form>
 				</div>
@@ -52,3 +91,6 @@ export class Page extends React.Component {
 		);
 	}
 }
+Page.propTypes = {
+	onSetTurn: PropTypes.func
+};

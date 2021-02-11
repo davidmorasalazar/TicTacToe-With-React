@@ -4,7 +4,7 @@ import ReactDOM from "react-dom";
 // import React, { Component } from "react";
 //include bootstrap npm library into the bundle
 import "bootstrap";
-
+import PropTypes from "prop-types";
 //include your index.scss file into the bundle
 import "../styles/index.scss";
 import { Page } from "./firstpage.js";
