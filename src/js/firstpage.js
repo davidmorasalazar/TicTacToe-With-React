@@ -10,8 +10,10 @@ import "../styles/index.scss";
 export class Page extends React.Component {
 	constructor(props) {
 		super(props);
-		this.player1 = null;
-		this.player2 = null;
+		this.state = {
+			player1: "",
+			player2: ""
+		};
 	}
 	render() {
 		return (
@@ -39,7 +41,8 @@ export class Page extends React.Component {
 									aria-describedby="inputGroup-sizing-default"
 									placeholder="Player 1"
 									onChange={event =>
-										(this.player1 = event.target.value)
+										(this.setState.player1 =
+											event.target.value)
 									}
 								/>
 								<label
@@ -54,7 +57,8 @@ export class Page extends React.Component {
 									aria-describedby="inputGroup-sizing-default"
 									placeholder="Player 2"
 									onChange={event =>
-										(this.player1 = event.target.value)
+										(this.setState.player2 =
+											event.target.value)
 									}
 								/>
 							</div>
@@ -65,21 +69,21 @@ export class Page extends React.Component {
 								onClick={() =>
 									this.props.onSetTurn(
 										"X",
-										this.player1,
-										this.player2
+										this.state.player1,
+										this.state.player2
 									)
 								}>
 								<span className="xMarker">X</span>
 							</button>
 							<button
 								type="button"
-								className="btn btn-primary"
+								className="btn btn-secondary"
 								data-dismiss="modal"
 								onClick={() =>
 									this.props.onSetTurn(
 										"O",
-										this.player1,
-										this.player2
+										this.state.player1,
+										this.state.player2
 									)
 								}>
 								<span className="oMarker">O</span>
@@ -92,5 +96,7 @@ export class Page extends React.Component {
 	}
 }
 Page.propTypes = {
-	onSetTurn: PropTypes.func
+	onSetTurn: PropTypes.func,
+	player1: PropTypes.string,
+	player2: PropTypes.string
 };

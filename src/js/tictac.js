@@ -156,5 +156,6 @@ Square.propTypes = {
 };
 Board.propTypes = {
 	squares: PropTypes.number,
-	onClick: PropTypes.func
+	onClick: PropTypes.func,
+	xIsNext: PropTypes.string
 };
